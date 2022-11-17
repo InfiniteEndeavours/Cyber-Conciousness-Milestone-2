@@ -1,0 +1,37 @@
+/* Google Fonts Import */
+@import url('https://fonts.googleapis.com/css2?family=IBM+Plex+Mono&family=IBM+Plex+Sans&display=swap');
+
+/* ----- General Styling -----*/
+body {
+    background-color: #0D0D0D;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: "IMB Plex Mono", monospace;
+    color: #C2F216;
+}
+
+p,
+a,
+ul li {
+    font-family: "IBM Plex Sans", sans-serif;
+}
+
+/* ----- Bootstrap Overrides ---- */
+
+/* ----- Header Styling -----*/
+.navbar-brand {
+    font-size: 1.9rem;
+}
+
+.nav-link,
+.navbar-brand {
+    color: #C2F216;
+    font-family: "IMB Plex Mono", monospace;
+    letter-spacing: 1px;
+}
