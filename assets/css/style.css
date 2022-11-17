@@ -20,8 +20,17 @@ p,
 a,
 ul li {
     font-family: "IBM Plex Sans", sans-serif;
+    color: #87a810;
 }
 
+.active {
+    text-decoration: underline #87a810;
+    text-underline-offset: 5px;
+}
+
+.section-spacer {
+    margin-top: 6rem;
+}
 /* ----- Bootstrap Overrides ---- */
 
 /* ----- Header Styling -----*/
@@ -34,4 +43,21 @@ ul li {
     color: #C2F216;
     font-family: "IMB Plex Mono", monospace;
     letter-spacing: 1px;
+}
+
+/* ----- Content Styling ----- */
+#title-spacer {
+    padding-top: 10rem;
+}
+/* ----- Footer ----- */
+footer {
+    background: #212529;
+}
+
+#footer-icons li{
+    font-size: 2rem;
+    padding-left: 20px;
+    padding-right: 20px;
+    list-style-type: none;
+    display: inline-block;
 }
