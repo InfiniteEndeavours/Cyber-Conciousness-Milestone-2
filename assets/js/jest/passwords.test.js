@@ -24,12 +24,14 @@ describe("Password Generator functions correctly", () => {
         expect(generatedPassword.length).toBeGreaterThanOrEqual(16)
     })
     test("Password is changed on button click", () => {
-        let oldPass = {};
-        oldPass.password = password.value;
+        let oldPass = {
+            password: password.value
+        };
         let button = document.getElementById("generate-password");
         button.click();
-        let newPass = {};
-        newPass.password = password.value;
+        let newPass = {
+            password: password.value
+        };
         expect(newPass).not.toMatchObject(oldPass);
     })
 });
