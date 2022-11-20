@@ -45,6 +45,19 @@ ul li {
     letter-spacing: 1px;
 }
 
+/* ----- Footer ----- */
+footer {
+    background: #212529;
+    padding: 2rem;
+}
+
+#footer-icons li{
+    font-size: 2rem;
+    padding-right: 20px;
+    list-style-type: none;
+    display: inline-block;
+}
+
 /* ----- Content Styling ----- */
 .title-spacer {
     padding-top: 5rem;
@@ -60,16 +73,4 @@ ul li {
 img {
     border-radius: 30%;
     background-color: #212529;
-}
-/* ----- Footer ----- */
-footer {
-    background: #212529;
-    padding: 2rem;
-}
-
-#footer-icons li{
-    font-size: 2rem;
-    padding-right: 20px;
-    list-style-type: none;
-    display: inline-block;
 }
