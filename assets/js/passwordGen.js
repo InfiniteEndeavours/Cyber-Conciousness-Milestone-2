@@ -1,26 +1,30 @@
-let passwordParagraph = document.getElementById("generated-password");
-
 document.addEventListener("DOMContentLoaded", function () {
-    passwordParagraph.textContent = domGenerator();
+
+    let passwordParagraph = document.getElementById("generated-password");
+    password.generate();
+    passwordParagraph.textContent = password.value;
+
+    let generatorButton = document.getElementById('generate-password');
+    generatorButton.addEventListener('click', function () {
+        password.generate();
+        passwordParagraph.textContent = password.value;
+    });
 });
 
-let domGenerator = () => {
-    let length = 32;
-    const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456790-_!@£$%^&*()#';
-    let genPassword = [];
-    while (genPassword.length <= length) {
-        let randomInt = Math.floor(Math.random() * 76);
-        genPassword.push(characters[randomInt]);
+let password = {
+    value: "",
+    length: 32,
+    characters: 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456790-_!@£$%^&*()#',
+    generate: function () {
+        let generatedPassword = [];
+        while (generatedPassword.length <= this.length) {
+            let random = Math.floor(Math.random() * 76);
+            generatedPassword.push(this.characters[random]);
+        }
+        this.value = (generatedPassword.join(""));
     }
-    return genPassword.join("");
 };
-
-let generatorButton = document.getElementById('generate-password');
-generatorButton.addEventListener('click', function () {
-    passwordParagraph.textContent = domGenerator();
-});
-
 // Export for jest testing - to be removed before deployment
 module.exports = {
-    domGenerator
+    password
 }
