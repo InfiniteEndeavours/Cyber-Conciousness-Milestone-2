@@ -1,7 +1,7 @@
+let passwordParagraph = document.getElementById("generated-password");
+
 document.addEventListener("DOMContentLoaded", function () {
-    let passwordParagraph = document.getElementById("generated-password");
     passwordParagraph.textContent = domGenerator();
-    console.log('test')
 });
 
 let domGenerator = () => {
@@ -14,3 +14,8 @@ let domGenerator = () => {
     }
     return genPassword.join("");
 };
+
+let generatorButton = document.getElementById('generate-password');
+generatorButton.addEventListener('click', function () {
+    passwordParagraph.textContent = domGenerator();
+});
