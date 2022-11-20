@@ -1,7 +1,10 @@
-/*TODO: Allow user to choose password length
-*TODO: Add version with event listener */
+document.addEventListener("DOMContentLoaded", function () {
+    let passwordParagraph = document.getElementById("generated-password");
+    passwordParagraph.textContent = domGenerator();
+    console.log('test')
+});
 
-let generator = () => {
+let domGenerator = () => {
     let length = 32;
     const characters = 'abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ0123456790-_!@£$%^&*()#';
     let genPassword = [];
@@ -10,6 +13,4 @@ let generator = () => {
         genPassword.push(characters[randomInt]);
     }
     return genPassword.join("");
-}
-
-console.log("Non-linked Generator: " + generator());
+};
