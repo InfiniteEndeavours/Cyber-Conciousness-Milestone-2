@@ -19,3 +19,8 @@ let generatorButton = document.getElementById('generate-password');
 generatorButton.addEventListener('click', function () {
     passwordParagraph.textContent = domGenerator();
 });
+
+// Export for jest testing - to be removed before deployment
+module.exports = {
+    domGenerator
+}
