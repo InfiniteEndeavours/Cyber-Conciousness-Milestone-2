@@ -3,9 +3,8 @@
  */
 
 const {
-    domGenerator
+    password
 } = require("../passwordGen")
-
 
 
 beforeAll(() => {
@@ -17,8 +16,20 @@ beforeAll(() => {
 });
 
 describe("Password Generator functions correctly", () => {
-    test("Password generated", () => {
-        let passwordHTML = document.getElementById('generated-password').innerText;
-        expect(document.getElementById('generated-password').innerText).toBe(passwordHTML);
-    });
+    test("Password is generated on DOM load", () => {
+        expect("value" in password).toBe(true);
+    })
+    test("Password is greater than or equal to minimum characters (16)", () => {
+        let generatedPassword = password.value;
+        expect(generatedPassword.length).toBeGreaterThanOrEqual(16)
+    })
+    test("Password is changed on button click", () => {
+        let oldPass = {};
+        oldPass.password = password.value;
+        let button = document.getElementById("generate-password");
+        button.click();
+        let newPass = {};
+        newPass.password = password.value;
+        expect(newPass).not.toMatchObject(oldPass);
+    })
 });
