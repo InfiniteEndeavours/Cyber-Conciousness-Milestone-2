@@ -74,3 +74,11 @@ img {
     border-radius: 30%;
     background-color: #212529;
 }
+
+/* ----- Password Generator ----- */
+
+#generated-password {
+    color: #C2F216;
+    padding-top: 1rem;
+    font-size: 1.2rem;
+}
