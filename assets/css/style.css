@@ -31,7 +31,43 @@ ul li {
 .section-spacer {
     margin-top: 6rem;
 }
+
 /* ----- Bootstrap Overrides ---- */
+
+.btn {
+    background-color: #212529;
+    color: #C2F216;
+    border-color: #212529;
+    margin: 1rem;
+    outline-color: #0D0D0D;
+}
+
+.btn:hover {
+    background-color: #C2F216;
+    color: #212529;
+    border-color: #C2F216;
+}
+
+.btn:active {
+    background-color: #C2F216;
+    color: #212529;
+    border-color: #C2F216;
+    box-shadow: #87a810;
+}
+
+.btn:focus {
+    background-color: #C2F216;
+    color: #212529;
+    border-color: #C2F216;
+    box-shadow: none;
+}
+
+.btn:focus-visible, .btn:focus-within {
+    background-color: #C2F216;
+    color: #212529;
+    border-color: #C2F216;
+    outline: none;
+}
 
 /* ----- Header Styling -----*/
 .navbar-brand {
@@ -51,7 +87,7 @@ footer {
     padding: 2rem;
 }
 
-#footer-icons li{
+#footer-icons li {
     font-size: 2rem;
     padding-right: 20px;
     list-style-type: none;
@@ -63,12 +99,6 @@ footer {
     padding-top: 5rem;
 }
 
-.btn-primary{
-    background-color: #212529;
-    color:#C2F216;
-    border-color: #212529;
-    margin: 1rem;
-}
 
 img {
     border-radius: 30%;
