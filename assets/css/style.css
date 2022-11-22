@@ -69,6 +69,15 @@ ul li {
     outline: none;
 }
 
+/* --- When all button states active --- */
+.btn-check:active + .btn:focus,
+.btn-check:checked + .btn:focus,
+.btn.active:focus,
+.btn.show:focus,
+.btn:active:focus {
+    box-shadow: #87a810;
+}
+
 /* ----- Header Styling -----*/
 .navbar-brand {
     font-size: 1.9rem;
