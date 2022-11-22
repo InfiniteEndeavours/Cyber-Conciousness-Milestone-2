@@ -1,7 +1,8 @@
 {
   "devDependencies": {
     "jest": "^29.3.1",
-    "jest-environment-jsdom": "^29.3.1"
+    "jest-environment-jsdom": "^29.3.1",
+    "xhr2": "^0.2.1"
   },
   "name": "ccm2-automated-test",
   "description": "This website is designed to act as a information outlet for users who are looking to be more security conscious online. It is an interactive site and is responsive on a number of devices. Using API's I will try to help users be more security conscious online.",
