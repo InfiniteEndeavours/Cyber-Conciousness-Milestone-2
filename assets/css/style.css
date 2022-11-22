@@ -18,7 +18,8 @@ h6 {
 
 p,
 a,
-ul li {
+ul li,
+label {
     font-family: "IBM Plex Sans", sans-serif;
     color: #87a810;
 }
@@ -121,4 +122,21 @@ img {
     color: #C2F216;
     padding-top: 1rem;
     font-size: 1.2rem;
+}
+
+/* ----- Email Checker ----- */
+
+#email-form {
+    display:flex;
+    flex-flow: wrap column;
+    justify-content: center;
+}
+
+#email-form:first-child {
+    flex: 0 1 100%;
+}
+
+#email-form>button,
+#email-form>input {
+    flex: 1 0 50%;
 }
