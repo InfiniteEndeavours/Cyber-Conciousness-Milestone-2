@@ -12,75 +12,125 @@
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-md navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="index.html">CyberSafe</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown"
+<nav class="navbar navbar-expand-md navbar-dark bg-dark">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">CyberSafe</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarDropdown"
                 aria-controls="navbarDropdown" aria-expanded="false" aria-label="Toggle Navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
+            <span class="navbar-toggler-icon"></span>
+        </button>
 
-            <div class="collapse navbar-collapse justify-content-md-end text-uppercase text-end" id="navbarDropdown">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="index.html">Home</a>
+        <div class="collapse navbar-collapse justify-content-md-end text-uppercase text-end" id="navbarDropdown">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="index.html">Home</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="passwords.html">Passwords</a>
+                </li>
+                <li class="nav-item active">
+                    <a class="nav-link" href="emails.html">Email</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="about.html">About</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contact</a>
+                </li>
+            </ul>
+        </div>
+    </div>
+</nav>
+
+<section class="container-fluid title-spacer">
+    <div class="row">
+        <div class="section-spacer"></div>
+        <div class="col-12 text-center text-uppercase">
+            <h1 id="page-title">Has your email address been compromised in a data breach?</h1>
+           <div id="email-form">
+                   <form>
+                       <label for="emailAddress">
+                           Enter your email address below to check if it has been involved in a data breach!
+                       </label>
+                       <input type="email" id="emailAddress" name="emailAddress" required>
+                       <button type="submit"></button>
+                   </form>
+           </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="section-spacer"></div>
+        <div class="col-12 text-center text-uppercase pb-5">
+            <h1>Helpful Resources</h1>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-center text-uppercase">
+            <a href="https://www.malwarebytes.com/phishing" class="text-decoration-none" target="_blank">
+                <img src="assets/imgs/malwareBytesLogo.png" width="240" height="240" alt="The logo of Malwarebytes">
+                <p class="py-5">Do you know how to protect your self from phishing attacks? Malicious actors will use
+                    clever tactics to try and steal your credentials, or even install malware on your device! This guide
+                    from Malwarebytes will help you identify phishing threats and help you protect yourself online.</p>
+            </a>
+        </div>
+        <div class="col-12 col-md-6 col-lg-4 text-center text-uppercase">
+            <a href="https://swisscyberinstitute.com/blog/10-tips-on-how-to-browse-the-internet-safely/#10_tips_on_how_to_browse_the_Internet_safely
+" class="text-decoration-none" target="_blank">
+                <img src="assets/imgs/swissLogo.png" width="240" height="240"
+                     alt="The logo of the Swiss Cyber Institute">
+                <p class="py-5">This article from the Swiss Cyber Institute has great advice for keeping your family and
+                    yourself safe online. Featuring advice ranging from securing your accounts with 2 Factor
+                    Authentication,
+                    to clearing cookies that can track you and the sites you visit.</p>
+            </a>
+        </div>
+        <div class="d-none d-lg-block col-lg-4 text-center text-uppercase">
+            <a href="https://www.ncsc.gov.uk/collection/top-tips-for-staying-secure-online" class="text-decoration-none"
+               target="_blank">
+                <img src="assets/imgs/ncscLogo.png" width="240" height="240"
+                     alt="The logo of the National Cyber Security Center">
+                <p class="py-5">The UK's National Cyber Security Center is one of the greatest places for information
+                    you can visit for staying safe online. As a part of the UK governments Government Communications
+                    Headquarters, it is backed by the latest technology and most upto date advice for keeping yourself
+                    safe online.</p>
+            </a>
+        </div>
+    </div>
+</section>
+
+<footer>
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-12 col-md-4">
+                <h4>Brief:</h4>
+                <p>This site is designed to help people be more secure online. We offer resources and tools to help
+                    achieve this.</p>
+            </div>
+            <div class="col-12 col-md-4">
+                <h4>Social Media:</h4>
+                <ul id="footer-icons">
+                    <li>
+                        <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="passwords.html">Passwords</a>
+                    <li>
+                        <a href="https://www.github.com/infiniteendeavours" target="_blank"><i
+                                class="fa-brands fa-github"></i></a>
                     </li>
-                    <li class="nav-item active">
-                        <a class="nav-link" href="emails.html">Email</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="contact.html">Contact</a>
+                    <li>
+                        <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
                     </li>
                 </ul>
             </div>
-        </div>
-    </nav>
-
-    <section class="container-fluid title-spacer">
-        <div class="row">
-
-        </div>
-    </section>
-
-    <footer>
-        <div class="container">
-            <div class="row text-center">
-                <div class="col-12 col-md-4">
-                    <h4>Brief:</h4>
-                    <p>This site is designed to help people be more secure online. We offer resources and tools to help achieve this.</p>
-                </div>
-                <div class="col-12 col-md-4">
-                    <h4>Social Media:</h4>
-                    <ul id="footer-icons">
-                        <li>
-                            <a href="https://www.twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.github.com/infiniteendeavours" target="_blank"><i class="fa-brands fa-github"></i></a>
-                        </li>
-                        <li>
-                            <a href="https://www.facebook.com" target="_blank"><i class="fa-brands fa-facebook"></i></a>
-                        </li>
-                    </ul>
-                </div>
-                <div class="col-12 col-md-4">
-                    <h4>Contact Me</h4>
-                    <a class="text-decoration-none" href="contact-me.html">Click here to contact me!</a>
-                </div>
+            <div class="col-12 col-md-4">
+                <h4>Contact Me</h4>
+                <a class="text-decoration-none" href="contact-me.html">Click here to contact me!</a>
             </div>
         </div>
-    </footer>
+    </div>
+</footer>
 
-    <!-- Font Awesome Kit Import -->
-    <script src="https://kit.fontawesome.com/767dbb02df.js"></script>
-    <!-- Bootstrap JS CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
+<!-- Font Awesome Kit Import -->
+<script src="https://kit.fontawesome.com/767dbb02df.js"></script>
+<!-- Bootstrap JS CDN -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/js/bootstrap.bundle.min.js"></script>
 </body>
 
 </html>
