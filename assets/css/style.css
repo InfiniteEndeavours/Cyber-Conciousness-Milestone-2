@@ -19,9 +19,12 @@ h6 {
 p,
 a,
 ul li,
-label {
+label,
+input::placeholder,
+input:focus{
     font-family: "IBM Plex Sans", sans-serif;
     color: #87a810;
+    -webkit-text-fill-color: #C2F216;
 }
 
 .active {
@@ -63,7 +66,7 @@ label {
     box-shadow: none;
 }
 
-.btn:focus-visible, .btn:focus-within {
+.btn:focus-visible, .btn:focus-within, input:focus-visible {
     background-color: #C2F216;
     color: #212529;
     border-color: #C2F216;
@@ -127,8 +130,8 @@ img {
 /* ----- Email Checker ----- */
 
 #email-form {
-    display:flex;
-    flex-flow: wrap column;
+    display: flex;
+    flex-flow: column;
     justify-content: center;
 }
 
@@ -143,4 +146,12 @@ img {
 
 #breachTable td, #breachTable th {
     color: #C2F216;
+}
+
+#email-form input {
+    background-color: #212529;
+    border: 1px solid #87a810;
+    text-align: center;
+    color: #C2F216;
+    font-family: "IBM Plex Sans", sans-serif ;
 }
