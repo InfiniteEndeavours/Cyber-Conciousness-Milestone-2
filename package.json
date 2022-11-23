@@ -1,0 +1,26 @@
+{
+  "name": "cyber-conciousness-milestone-2",
+  "version": "1.0.0",
+  "description": "This website is designed to act as a information outlet for users who are looking to be more security conscious online. It is an interactive site and is responsive on a number of devices. Using API's I will try to help users be more security conscious online.",
+  "main": "index.js",
+  "directories": {
+    "doc": "docs"
+  },
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/InfiniteEndeavours/Cyber-Conciousness-Milestone-2.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/InfiniteEndeavours/Cyber-Conciousness-Milestone-2/issues"
+  },
+  "homepage": "https://github.com/InfiniteEndeavours/Cyber-Conciousness-Milestone-2#readme",
+  "devDependencies": {
+    "jest": "^29.3.1",
+    "jest-environment-jsdom": "^29.3.1"
+  }
+}
