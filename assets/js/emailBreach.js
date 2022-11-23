@@ -7,8 +7,9 @@ function returnData(email, callback) {
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             callback(JSON.parse(this.responseText));
+        } else if (this.status === 404) {
+            callback(this.status)
         }
-
     }
 }
 
@@ -33,6 +34,9 @@ function displayBreach(email) {
     let rows = [];
     let tableDiv = document.getElementById("breachTable");
     returnData(email, function (data) {
+        if (data === 404) {
+            window.alert("Either the Email address you have entered is invalid, or it hasn't been involved in a breach!")
+        }
         let headers = createTableHeaders(data[0]);
         tableDiv.innerHTML = `
         <table class="table table-hover table-dark">
@@ -42,3 +46,11 @@ function displayBreach(email) {
     })
 
 }
+
+const form = document.getElementById("email-form");
+form.addEventListener("submit", function (event) {
+    event.preventDefault();
+    let inputField = document.getElementById("emailAddress").value;
+    let emailAddress = inputField.replace(/\s/g, '');
+    displayBreach(emailAddress);
+})
