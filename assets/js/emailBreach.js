@@ -38,10 +38,26 @@ function displayBreach(email) {
             window.alert("Either the Email address you have entered is invalid, or it hasn't been involved in a breach!")
         }
         let headers = createTableHeaders(data[0]);
+        data.forEach(function (obj) {
+            let tableRow = [];
+            Object.keys(obj).forEach(function (key) {
+                if (key === "Name") {
+                    tableRow.push(`<td>${obj[key].toString()}</td>`);
+                } else if (key === "BreachDate") {
+                    tableRow.push(`<td>${obj[key].toString()}</td>`);
+                } else if (key === "IsVerified") {
+                    tableRow.push(`<td>${obj[key].toString()}</td>`);
+                } else if (key === "Description") {
+                    tableRow.push(`<td>${obj[key].toString()}</td>`);
+                }
+
+            })
+            rows.push(`<tr>${tableRow}</tr>`)
+        })
+
         tableDiv.innerHTML = `
         <table class="table table-hover table-dark">
-            <thead>${headers}</thead>
-            <tbody>${rows}</tbody>
+            ${headers}${rows}
         </table>`
     })
 
