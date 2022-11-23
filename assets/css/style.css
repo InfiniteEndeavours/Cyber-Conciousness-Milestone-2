@@ -140,3 +140,7 @@ img {
 #email-form>input {
     flex: 1 0 50%;
 }
+
+#breachTable td, #breachTable th {
+    color: #C2F216;
+}
