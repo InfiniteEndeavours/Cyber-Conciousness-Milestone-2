@@ -16,25 +16,29 @@ function createTableHeaders(item) {
     let headers = [];
     // Cycle through each object key and push into headers array
     Object.keys(item).forEach(function (key) {
-        if (key === 'Name' || key === 'BreachDate') {
-
+        if (key === "Name") {
+            headers.push(`<th scope="col">Name</th>`)
+        } else if (key === "BreachDate") {
+            headers.push(`<th scope="col">Breach Date</th>`)
+        } else if (key === "IsVerified") {
+            headers.push(`<th scope="col">Verified</th>`)
+        } else if (key === "Description") {
+            headers.push(`<th scope="col">${key}</th>`)
         }
     })
     return `<tr>${headers}</tr>`
 }
 
-function dataPrint(email) {
+function displayBreach(email) {
     let rows = [];
     let tableDiv = document.getElementById("breachTable");
     returnData(email, function (data) {
         let headers = createTableHeaders(data[0]);
         tableDiv.innerHTML = `
-        <table>
+        <table class="table table-hover table-dark">
             <thead>${headers}</thead>
             <tbody>${rows}</tbody>
         </table>`
     })
 
 }
-
-dataPrint("ethanpitt2001@gmail.com");
