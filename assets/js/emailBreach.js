@@ -7,7 +7,7 @@ function returnData(email, callback) {
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
             callback(JSON.parse(this.responseText));
-        } else if (this.status === 404) {
+        } else if (this.readySate === 4 && this.status === 404) {
             callback(this.status)
         }
     }
