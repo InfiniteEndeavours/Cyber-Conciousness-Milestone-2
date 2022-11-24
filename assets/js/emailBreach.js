@@ -1,6 +1,6 @@
 function returnData(email, callback) {
     let xhr = new XMLHttpRequest();
-    let url = `https://cors-anywhere.herokuapp.com/https://haveibeenpwned.com/api/v3/breachedaccount/${email}?truncateResponse=false`
+    let url = `http://104.248.194.61:8080/https://haveibeenpwned.com/api/v3/breachedaccount/${email}?truncateResponse=false`
     xhr.open("GET", url);
     xhr.setRequestHeader("hibp-api-key", "b887c4fdc6fc4a3eb2f43518d10bdf16");
     xhr.send();
