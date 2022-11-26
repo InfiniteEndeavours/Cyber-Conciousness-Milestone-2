@@ -98,6 +98,9 @@ input:focus{
 footer {
     background: #212529;
     padding: 2rem;
+    bottom: 0;
+    position: static;
+    width: 100%;
 }
 
 #footer-icons li {
@@ -107,11 +110,18 @@ footer {
     display: inline-block;
 }
 
+.footer-spacer {
+    margin-bottom: 12rem;
+}
+
 /* ----- Content Styling ----- */
 .title-spacer {
     padding-top: 5rem;
 }
 
+.row p {
+    padding: 2rem 2rem;
+}
 
 img {
     border: 1px solid #87a810;
@@ -154,4 +164,37 @@ img {
     text-align: center;
     color: #C2F216;
     font-family: "IBM Plex Sans", sans-serif ;
+}
+
+/* ----- About Page ----- */
+
+.about {
+    margin-left: 12rem;
+    margin-right: 12rem;
+}
+
+/* ----- Media Queries ----- */
+@media (max-width: 992px) {
+    body{
+        font-size: 14px;
+    }
+    .about {
+        margin-left: 4rem;
+        margin-right: 4rem;
+    }
+    .section-spacer {
+        margin-top: 1rem;
+    }
+    .footer-spacer {
+        margin-bottom: 4rem;
+    }
+
+    .row p {
+        padding: 1rem 1rem;
+    }
+
+    img {
+        width: 120px;
+        height: 120px;
+    }
 }
