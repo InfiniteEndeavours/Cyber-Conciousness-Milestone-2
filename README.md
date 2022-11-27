@@ -227,9 +227,66 @@ During this project, I used both Google Chrome's and Firefox's development tools
 To validate the HTML, CSS and JavaScript of the site. I used the following sites;
 - [HTML Validator by W3C](https://validator.w3.org/).
 - [CSS Validator by W3C](https://jigsaw.w3.org/css-validator/).
-- [JSHint](https://jigsaw.w3.org/css-validator/) Installed locally.
+- [JSHint](https://jshint.com/) Installed locally.
 
 ### HTML Validation
+See below links to the images showing that all HTML documents passed the W3C Validator.
 
+- [index.html](docs/imgs/indexHTMLValidation.png)
+- [passwords.html](docs/imgs/passwordsHTMLValidation.png)
+- [emails.html](docs/imgs/emailsHTMLValidation.png)
+- [about.html](docs/imgs/aboutHTMLValidation.png)
+- [contact.html](docs/imgs/contactHTMLValidation.png)
 
+### CSS Validation
+The CSS passed the validation with no error, however there were 8 warnings.
+- [CSS Validation](docs/imgs/styleCSSValidation.png)
 
+These warnings are due to there being multiple `.btn`selectors with different states.
+- [CSS Warnings](docs/imgs/cssValidationWarnings.png)
+
+### JavaScript Validation
+The below screenshot shows all three JavaScript files passing the JSHint validation. 
+- [JavaScript Validation](docs/imgs/jsJSHintValidation.png)
+
+NOTE: If you are validating this yourself, you must specify the config file which tells JSHint that these files are using ESVersion 6.
+
+`jshint file.js --config ../path/to/.jshintrc`
+
+## Testing User Stories
+
+### Designer
+As the designer; 
+- The site is easy to read for users.
+- It is responsive. See Am I Responsive Image.
+- Features a password generator.
+- Allows the user to check if their email has been involved in a data breach.
+- Allows user to contact the designer.
+
+### First-Time Visitor
+As a first time visitor;
+- View information on how to stay safe online.
+  - I can achieve this by using the 'Helpful Resources' section.
+  ![Support Image](docs/userTesting/firstTimeVisitor1.png)
+- Generate a new password.
+  - I can achieve this by visiting the 'Password Generator' page and clicking 'Generate Password'.
+  ![Password Generator](docs/userTesting/firstTimeVisitor2.png)
+- Download safety information.
+  - I cannot download information however there are many useful articles I can visit instead.
+- Navigate the site easily.
+  - I can navigate the site easily using the navigation menu. 
+  ![Navigation Menu](docs/userTesting/firstTimeVisitor4.png)
+
+### Returning Visitor
+As a returning visitor;
+- Quickly generate a new and secure password.
+  - I can do this by visiting the passwords page and clicking generate new password.
+  ![Password Generator](docs/userTesting/firstTimeVisitor2.png)
+- Check if my information has been involved in a data breach.
+  - I can do this by visiting the email page and typing my email address into the search field.
+  ![Email Data Breach Checker](docs/userTesting/returningVisitor2.png)
+- Share safety resources and tips with friends and family.
+  - I can do this by looking at the 'Helpful Resources' sections on each page.
+  ![Helpful Resources](docs/userTesting/firstTimeVisitor1.png)
+
+## Lighthouse Testing
