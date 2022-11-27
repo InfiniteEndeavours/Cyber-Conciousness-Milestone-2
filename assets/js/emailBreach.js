@@ -22,9 +22,9 @@ function createTableHeaders(item) {
         } else if (key === "BreachDate") {
             headers.push(`<th scope="col">Breach Date</th>`);
         } else if (key === "IsVerified") {
-            headers.push(`<th scope="col">Verified</th>`);
+            headers.push(`<th class="d-none d-md-block" scope="col">Verified</th>`);
         } else if (key === "Description") {
-            headers.push(`<th scope="col">${key}</th>`);
+            headers.push(`<th class="d-none d-md-block" scope="col">${key}</th>`);
         }
     });
     return `<tr>${headers}</tr>`;
