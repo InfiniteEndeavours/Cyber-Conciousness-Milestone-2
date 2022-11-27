@@ -33,6 +33,7 @@ function createTableHeaders(item) {
 function displayBreach(email) {
     let rows = [];
     let tableDiv = document.getElementById("breachTable");
+    tableDiv.innerHTML = "";
     returnData(email, function (data) {
         if (data === 404) {
             window.alert("Either the Email address you have entered is invalid, or it hasn't been involved in a breach!");
