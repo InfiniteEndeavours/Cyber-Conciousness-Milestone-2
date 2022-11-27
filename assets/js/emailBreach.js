@@ -46,9 +46,9 @@ function displayBreach(email) {
                 } else if (key === "BreachDate") {
                     tableRow.push(`<td>${obj[key].toString()}</td>`);
                 } else if (key === "IsVerified") {
-                    tableRow.push(`<td>${obj[key].toString()}</td>`);
+                    tableRow.push(`<td class="d-none d-md-block">${obj[key].toString()}</td>`);
                 } else if (key === "Description") {
-                    tableRow.push(`<td>${obj[key].toString()}</td>`);
+                    tableRow.push(`<td class="d-none d-md-block">${obj[key].toString()}</td>`);
                 }
 
             });
