@@ -4,7 +4,7 @@ This website is designed to act as a information outlet for users who are lookin
 
 The live website can be found [here](https://infiniteendeavours.github.io/Cyber-Conciousness-Milestone-2/).
 
-[### Am I responsive picture here]()
+![Am I responsive Image](docs/imgs/amIResponsive.png)
 
 # Contents
 
@@ -18,19 +18,18 @@ The live website can be found [here](https://infiniteendeavours.github.io/Cyber-
 	* [Images](#images)
 	* [Wireframes](#wireframes)
 	* [Accessibility](#accessibility)
-* Technologies
-	* Languages Used
-	* Frameworks, Programs, Libraries and APIs used.
-* Deployment & Development
-	* Local Development
-	* Development
-	* Deployment
-* Testing
-	* Feedback
-	* Bugs
-	* Validation
-	* Testing User Stories
-	* Lighthouse
+* [Technologies](#technologies)
+	* [Languages Used](#languages-used)
+	* [Frameworks, Programs, Libraries and APIs used](#programs-libraries-frameworks-and-apis-used)
+* [Deployment & Development](#development-and-deployment)
+	* [Local Development](#local-development)
+	* [Online Development](#online-development)
+	* [Deployment](#deployment)
+* [Testing](#testing)
+	* [Bugs](#bugs)
+	* [Validation](#validation)
+	* [Testing User Stories](#testing-user-stories)
+	* [Lighthouse](#lighthouse-testing)
 	* Manual Testing
 	* Automated Testing
 * Credits
@@ -219,11 +218,12 @@ During this project, I used both Google Chrome's and Firefox's development tools
 
 - Known Issues
   - It is possible when clicking the 'Check Email' button on the Emails page, that the request doesn't reach the Have I Been Pwned API. From my investigation all JavaScript works correctly, and it seems to be an issue between the Proxy server and the HIBP API.
-
+  - A error is logged to the console on the Passwords page. This is due to the fact that to run the JEST test scripts we need to export the module. Chrome does not recognise this as a function.
 - Resolved Bugs
   - CORS Error - When querying the Have I been Pwned API, a CORS error was received. The error listed that access to the API was blocked by the browser as there was no 'Access-Control-Allow-Origin' header on the requested resource.
     - The workaround to this was to either use or create a proxy server using CORS-Anywhere.
-
+  - Under 471 pixels wide, the table that is inserted into the DOM via the emailBreach.js file causes some styling issues.
+    - When creating the table via JS, I added in the `d-none d-md-block` classes to the description and verified columns.
 ## Validation
 To validate the HTML, CSS and JavaScript of the site. I used the following sites;
 - [HTML Validator by W3C](https://validator.w3.org/).
@@ -259,7 +259,7 @@ NOTE: If you are validating this yourself, you must specify the config file whic
 ### Designer
 As the designer; 
 - The site is easy to read for users.
-- It is responsive. See Am I Responsive Image.
+- It is responsive. [See Am I Responsive Image](docs/imgs/amIResponsive.png).
 - Features a password generator.
 - Allows the user to check if their email has been involved in a data breach.
 - Allows user to contact the designer.
@@ -291,3 +291,26 @@ As a returning visitor;
   ![Helpful Resources](docs/userTesting/firstTimeVisitor1.png)
 
 ## Lighthouse Testing
+
+Here are links to the lighthouse tests for each page on both mobile and desktop devices;
+- Index
+  - [Mobile](docs/lighthouse/indexMobile.png)
+  - [Desktop](docs/lighthouse/indexDesktop.png)
+- Passwords
+  - [Mobile](docs/lighthouse/passwordsMobile.png)
+  - [Desktop](docs/lighthouse/passwordsDesktop.png)
+- Emails
+  - [Mobile](docs/lighthouse/emailsMobile.png)
+  - [Desktop](docs/lighthouse/emailsDesktop.png)
+- About
+  - [Mobile](docs/lighthouse/aboutMobile.png)
+  - [Desktop](docs/lighthouse/aboutDesktop.png)
+- Contact
+  - [Mobile](docs/lighthouse/contactMobile.png)
+  - [Desktop](docs/lighthouse/contactDesktop.png)
+
+### Observations
+While testing lighthouse, I noticed that whenever running the tests as seen from a mobile, that performance was roughly the same across all tests (94), while desktops easily maintained 100.
+I believe this is due to Lighthouse choosing to emulate a Moto G4, which is a low-end device (released 8 years ago). When testing on my mobile phone I see no performance issues.
+
+## Manual Testing
