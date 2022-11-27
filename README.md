@@ -30,9 +30,10 @@ The live website can be found [here](https://infiniteendeavours.github.io/Cyber-
 	* [Validation](#validation)
 	* [Testing User Stories](#testing-user-stories)
 	* [Lighthouse](#lighthouse-testing)
-	* Manual Testing
-	* Automated Testing
-* Credits
+    * [Testing Methodologies](#testing-methodologies)
+	* [Manual Testing](#manual-testing)
+	* [Automated Testing](#automated-testing)
+* [Credits](#credits)
 
 # User Experience
 
