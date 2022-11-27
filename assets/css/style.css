@@ -53,7 +53,7 @@ label {
     background-color: #C2F216;
     color: #212529;
     border-color: #C2F216;
-    box-shadow: #87a810;
+    box-shadow: none;
 }
 
 .btn:focus {
@@ -76,7 +76,7 @@ label {
 .btn.active:focus,
 .btn.show:focus,
 .btn:active:focus {
-    box-shadow: #87a810;
+    box-shadow: none;
 }
 
 /* ----- Header Styling -----*/
