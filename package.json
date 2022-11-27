@@ -21,6 +21,7 @@
   "homepage": "https://github.com/InfiniteEndeavours/Cyber-Conciousness-Milestone-2#readme",
   "devDependencies": {
     "jest": "^29.3.1",
-    "jest-environment-jsdom": "^29.3.1"
+    "jest-environment-jsdom": "^29.3.1",
+    "jshint": "^2.13.6"
   }
 }
