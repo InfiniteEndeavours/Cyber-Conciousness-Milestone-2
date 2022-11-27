@@ -27,4 +27,4 @@ let password = {
 // Export for jest testing - to be removed before deployment
 module.exports = {
     password
-}
+};

@@ -1,6 +1,6 @@
 function returnData(email, callback) {
     let xhr = new XMLHttpRequest();
-    let url = `https://infiniteendeavours.co.uk:7200/https://haveibeenpwned.com/api/v3/breachedaccount/${email}?truncateResponse=false`
+    let url = `https://infiniteendeavours.co.uk:7200/https://haveibeenpwned.com/api/v3/breachedaccount/${email}?truncateResponse=false`;
     xhr.open("GET", url);
     xhr.setRequestHeader("hibp-api-key", "b887c4fdc6fc4a3eb2f43518d10bdf16");
     xhr.send();
@@ -8,9 +8,9 @@ function returnData(email, callback) {
         if (this.readyState === 4 && this.status === 200) {
             callback(JSON.parse(this.responseText));
         } else if (this.readyState === 4 && this.status === 404) {
-            callback(this.status)
+            callback(this.status);
         }
-    }
+    };
 }
 
 function createTableHeaders(item) {
@@ -18,16 +18,16 @@ function createTableHeaders(item) {
     // Cycle through each object key and push into headers array
     Object.keys(item).forEach(function (key) {
         if (key === "Name") {
-            headers.push(`<th scope="col">Name</th>`)
+            headers.push(`<th scope="col">Name</th>`);
         } else if (key === "BreachDate") {
-            headers.push(`<th scope="col">Breach Date</th>`)
+            headers.push(`<th scope="col">Breach Date</th>`);
         } else if (key === "IsVerified") {
-            headers.push(`<th scope="col">Verified</th>`)
+            headers.push(`<th scope="col">Verified</th>`);
         } else if (key === "Description") {
-            headers.push(`<th scope="col">${key}</th>`)
+            headers.push(`<th scope="col">${key}</th>`);
         }
-    })
-    return `<tr>${headers}</tr>`
+    });
+    return `<tr>${headers}</tr>`;
 }
 
 function displayBreach(email) {
@@ -35,7 +35,7 @@ function displayBreach(email) {
     let tableDiv = document.getElementById("breachTable");
     returnData(email, function (data) {
         if (data === 404) {
-            window.alert("Either the Email address you have entered is invalid, or it hasn't been involved in a breach!")
+            window.alert("Either the Email address you have entered is invalid, or it hasn't been involved in a breach!");
         }
         let headers = createTableHeaders(data[0]);
         data.forEach(function (obj) {
@@ -51,15 +51,15 @@ function displayBreach(email) {
                     tableRow.push(`<td>${obj[key].toString()}</td>`);
                 }
 
-            })
-            rows.push(`<tr>${tableRow}</tr>`)
-        })
+            });
+            rows.push(`<tr>${tableRow}</tr>`);
+        });
 
         tableDiv.innerHTML = `
         <table class="table table-hover table-dark">
             ${headers}${rows}
-        </table>`
-    })
+        </table>`;
+    });
 
 }
 
@@ -69,4 +69,4 @@ form.addEventListener("submit", function (event) {
     let inputField = document.getElementById("emailAddress").value;
     let emailAddress = inputField.replace(/\s/g, '');
     displayBreach(emailAddress);
-})
+});
