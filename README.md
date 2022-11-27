@@ -313,4 +313,95 @@ Here are links to the lighthouse tests for each page on both mobile and desktop 
 While testing lighthouse, I noticed that whenever running the tests as seen from a mobile, that performance was roughly the same across all tests (94), while desktops easily maintained 100.
 I believe this is due to Lighthouse choosing to emulate a Moto G4, which is a low-end device (released 8 years ago). When testing on my mobile phone I see no performance issues.
 
+## Testing Methodologies
+
+For this project, I went with two methods of testing, Behaviour Driven and Test Driven.
+
+### Behaviour Driven / Manual testing
+
+This testing will be used to simulate how an end user interacts with the site. This will involve using the site as a user would, ensuring that access to all pages is working correctly and that all functions are also working as intended.
+
+This kind of testing will usually be seen when a Developer is working with a product manager or user.
+
+### Test Driven / Automated Testing
+
+I used Test Driven behaviour to test the functionality of the password generator, which is made using vanilla JavaScript.
+Using JEST, I was able to make sure that the majority of scenarios that the password generator would be in are suitable.
+
+This type of testing will usually be carried out by the Developer. Tests will be written before any code has been written. This helps prevent bugs in the program.
+
+
 ## Manual Testing
+
+To test this website, I used three devices with three different browsers on each. These were;
+- Desktop - 3440 x 1440 - Google Chrome, Safari, Firefox
+- Laptop - 2560 x 1600 - Google Chrome, Safari, Firefox
+- Mobile - 1284 x 2778 (Portrait) and 2778 x 1284 (Landscape) - Google Chrome, Safari, Firefox
+
+### Responsiveness
+
+For my testing, I went through each page of the website on my devices. I observed no issues on my laptop or desktop, however on mobile I did observe an issue with the 'Email' page.
+
+When the results from the Have I been Pwned API were inserted into the DOM, the table had a fixed width. On smaller devices, this caused the styling to break.
+To resolve it, I added the Bootstrap classes `d-none d-md-block` to the JavaScript that creates the table column and cells.
+
+This was resolved in [this commit](https://github.com/InfiniteEndeavours/Cyber-Conciousness-Milestone-2/commit/fea86818c789bf8279e136402d0c60c42576cbe9).
+
+### Hyperlinks
+
+I visited all the pages and tested each hyperlink (Navigation Bar, Helpful Resources and Footer links) to ensure that all Hyperlinks worked correctly.
+
+No issues were discovered during this test.
+
+### Password Generator
+I was unable to find any issue with the password generator from a user's perspective. 
+
+Testing involved using a macro to spam the generate button however no issues came back from this.
+
+### Email Breach Checker
+During my testing on this page, as noted in the [responsiveness](#responsiveness) section, an issue with the styling was found when the table was inserted into the DOM.
+
+### About Page
+No issues were found on the about page.
+
+### Contact Form
+No issues were found on the contact page.
+
+## Automated Testing
+
+I performed Automated testing on the Password Generator using the JEST Framework.
+
+For the automated testing, I created a series of tests. These were;
+- To make sure that upon completion of loading the DOM, that a password was generated and presented to the user.
+- To make sure that the password which is generated is equal or greater than 16 characters in length.
+- To make sure that on click of the 'Generate Password' button, that a new password is generated.
+
+The code for these tests can be found [here](assets/js/jest/passwords.test.js).
+
+All tests passed successfully.
+
+![Jest Test Results](docs/imgs/jestTesting.png)
+
+# Credits
+
+## Content
+The Password Generator was written by myself.
+
+The API which is used to check for a users email in a data breach was provided via [haveIBeenPwned](https://www.haveibeenpwned.com).
+
+All articles were sourced from Google and are property of their respective owners.
+
+Logos are used under the 'Fair Use' act.
+
+## Code
+
+While not a part of the website, the proxy which is used to resolve an error with CORS (Cross Origin Resource Sharing), was inspired by [this post](https://stackoverflow.com/questions/60066942/cors-anywhere-how-to-add-https-support). 
+
+Using the CORS-Anywhere module, created by [Rob](https://github.com/Rob--W), I was able to setup my own Proxy on a Virtual Private Server.
+
+Certificates for the proxy were generated using Lets Encrypt/Cert Bot.
+
+
+## Acknowledgements
+
+- Jack Wachira - My Code Institute Mentor.
