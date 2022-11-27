@@ -22,7 +22,6 @@ ul li,
 label {
     font-family: "IBM Plex Sans", sans-serif;
     color: #87a810;
-    -webkit-text-fill-color: #C2F216;
 }
 
 .active {
