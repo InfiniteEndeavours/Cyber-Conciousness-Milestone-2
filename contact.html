@@ -61,19 +61,19 @@
             <h1>If you have any questions or requests please use the below form!</h1>
         </div>
         <div class="col-12 text-center text-uppercase section-spacer">
-            <form id="contact-form" onsubmit="return sendMail(this);">
+            <form id="contact-form">
                 <div class="form-group">
-                    <label for="emailAddress">Email Address</label>
-                    <input type="email" name="email" class="form-control" id="emailAddress"
+                    <label for="from_email">Email Address</label>
+                    <input type="email" name="from_email" class="form-control" id="from_email"
                            placeholder="Your Email Here">
                 </div>
                 <div class="form-group">
-                    <label for="fullName">Your Name</label>
-                    <input type="text" name="fullName" class="form-control" id="fullName" placeholder="Your Name Here">
+                    <label for="from_name">Your Name</label>
+                    <input type="text" name="from_name" class="form-control" id="from_name" placeholder="Your Name Here">
                 </div>
                 <div class="form-group">
-                    <label for="submission">Your Request</label>
-                    <textarea id="submission" name="submission" class="form-control"
+                    <label for="message">Your Request</label>
+                    <textarea id="message" name="message" class="form-control"
                               placeholder="Your Request Here"></textarea>
                 </div>
                 <button type="submit" class="btn btn-primary footer-spacer">Submit</button>
