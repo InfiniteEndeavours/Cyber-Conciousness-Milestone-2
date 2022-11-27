@@ -168,6 +168,7 @@ During this project I used the following;
 - CloudConvert - To convert images from PNGs to SVGs.
 - HaveIBeenPwned - Their API was used to check if an email address has been involved in a breach.
 - EmailJS - This API was used to allow users of the site to fill out a contact form which is then sent to my email.
+- Compressor.io - To Reduce Image Sizes.
 
 # Development and Deployment
 During this project, I used a mix of both local and online development.
