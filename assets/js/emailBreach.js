@@ -2,7 +2,7 @@ function returnData(email, callback) {
     let xhr = new XMLHttpRequest();
     let url = `https://infiniteendeavours.co.uk:7200/https://haveibeenpwned.com/api/v3/breachedaccount/${email}?truncateResponse=false`;
     xhr.open("GET", url);
-    xhr.setRequestHeader("hibp-api-key", "b887c4fdc6fc4a3eb2f43518d10bdf16");
+    xhr.setRequestHeader("hibp-api-key", "11e37972aa424da3b45cc3b2e91808bd");
     xhr.send();
     xhr.onreadystatechange = function () {
         if (this.readyState === 4 && this.status === 200) {
